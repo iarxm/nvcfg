@@ -19,10 +19,9 @@ return {
                     paths = true,
                     tables = true,
                     yaml = true,
-                    cmp = false,
+                    completion = false,
                 },
                 filetypes = {
-                    md = true,
                     rmd = true,
                     markdown = true,
                 },
@@ -61,24 +60,50 @@ return {
                 new_file_template = {
                     use_template = false,
                     placeholders = {
-                        before = {
-                            title = "link_title",
-                            date = "os_date"
-                        },
-                        after = {}
+                        title = "link_title",
+                        date = "os_date",
                     },
                     template = "# {{ title }}"
                 },
                 to_do = {
-                    symbols = {' ', '-', 'X'},
-                    update_parents = true,
-                    not_started = ' ',
-                    in_progress = '-',
-                    complete = 'X'
+                    highlight = false,
+                    statuses = {
+                        not_started = { marker = ' ',  },
+                        in_progress = { marker = '-',  },
+                        complete = { marker = { 'X', 'x' },  },
+                    },
+                    status_order = { 'not_started', 'in_progress', 'complete' },
+                    status_propagation = {
+                        up = true,
+                        down = true
+                    },
+                    sort = {
+                        on_status_change = false,
+                        recursive = false,
+                        cursor_behavior = { track = true },
+                    },
                 },
+                --to_do = {
+                --    symbols = {' ', '-', 'X'},
+                --    status_propogation = {
+                --        up = true,
+                --        down = true,
+                --    },
+                --    statuses = { 
+                --        not_started = {
+                --            marker = ' ',
+                --        },
+                --        in_progress = {
+                --            marker = '-',
+                --        },
+                --        complete = {
+                --            marker = 'X',
+                --        },
+                --    },
+                --},
                 foldtext = {
                     object_count = true,
-                    object_count_icons = 'emoji',
+                    --object_count_icons = 'emoji',
                     object_count_opts = function()
                         return require('mkdnflow').foldtext.default_count_opts()
                     end,
@@ -86,7 +111,7 @@ return {
                     line_percentage = true,
                     word_count = false,
                     title_transformer = nil,
-                    separator = ' · ',
+                    --separator = ' · ',
                     fill_chars = {
                         left_edge = '⢾',
                         right_edge = '⡷',

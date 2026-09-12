@@ -71,7 +71,6 @@ end, {
 -- task: move to relevant plugin sections-
 -- user commands
 
-
 -- g:colors_name sometimes prints the parent colorscheme but not the sub scheme (eg kanagawa-wave is saved as 'kanagawa'), then goyo causes issues. Add 'COLORS_VIM' to goyo_leave
 -- kanagawa-wave tokyonight-night tokyonight rosebones catppuccin-mocha catppuccin-frappe catppuccini zenbones kanagawa-dragon eldar rose-pine simpleblack vividchalk murphy
 --vim.highlight.VertSplit cterm=NONE

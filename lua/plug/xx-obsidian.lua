@@ -26,11 +26,11 @@ return {
         workspaces = {
             {
                 name = "all",
-                path = "~/da",
+                path = "~/d",
             },
             {
                 name = "dev notes",
-                path = "~/ud/dva/adev",
+                path = "/dat/ud/dva/_adev",
             },
         },
         follow_url_func = function(url)

@@ -1,7 +1,7 @@
 local M        = {}
 local cmd      = vim.api.nvim_command
 -- dirs
-local hr       = "$HOME/da"
+local hr       = "$HOME/d"
 local ha       = hr .. '/a'
 local hb       = hr .. '/aa'
 local hm_ml    = hr .. '/cm/yml'
